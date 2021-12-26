@@ -19,18 +19,20 @@ function Games() {
 
     if(loading) return <h1>Loading...</h1>
 
-    console.log(data)
     return (
         <div>
             {
                 data.map(item => <div key={item.id} class="card">
-                <img src={item.thumbnail} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">{item.title}</h5>
-                  <p class="card-text">{item.short_description}</p>
-                  <Link to={`/games/${item.id}`} class="btn btn-primary">See Detail</Link>
-                </div>
-              </div>)
+                                    <img src={item.thumbnail} class="card-img-top" alt="..."/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{item.title}</h5>
+                                        <p class="card-text">{item.short_description}</p>
+                                        <Link to={`/games/${item.id}`} class="btn btn-primary">
+                                            See Detail
+                                        </Link>
+                                    </div>
+                                </div>
+                        )
             }
         </div>
     )
