@@ -4,9 +4,10 @@ import Footer from "./components/base/Footer"
 import {Routes, Route} from "react-router-dom"
 import routes from './routes';
 
+
 function App() {
   return (
-    <div>
+    <div className='bg-dark'>
       <Navbar />
       <Routes>
         {

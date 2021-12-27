@@ -1,0 +1,11 @@
+.body-overflow {
+    height: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-title {
+    height: 50px;
+}
