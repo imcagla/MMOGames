@@ -8,10 +8,16 @@ function GameDetail() {
     const [game, setGame] = useState([])
 
     useEffect(() => {
-        const URL = `https://www.freetogame.com/api/game?id=${params.gameId}`
+        const URL = `https://mmo-games.p.rapidapi.com/game?id=${params.gameId}`
 
-        fetch(URL)
-            .then(resp => resp.json)
+        fetch(URL, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "mmo-games.p.rapidapi.com",
+                "x-rapidapi-key": "8c598069f1msh851f19ab6d8c51ep1bf565jsn69db72100df9"
+            }
+        })
+            .then((response) => response.json())
             .then(json => setGame(json))
     }, [])
 
