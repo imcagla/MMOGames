@@ -5,24 +5,24 @@ import routes from '../../routes'
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-dark bg-dark">
-                <div className="container">
-                    <Link className="navbar-brand" to="/">MMOGames</Link>
-                    <div>
-                        <ul className="navbar mb-2 mb-lg-0">
-                            {
+            <div class="container">
+                <header class="d-flex justify-content-center py-3">
+                <Link to="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
+                    <i class="fas fa-gamepad fa-3x mx-2"></i>
+                    <span class="fs-4">MMO Games</span>
+                </Link>
+                <ul class="nav nav-pills">
+                {
                                 routes.filter(item => item.isNav).map((item,index) => 
-                                        <Link key={index} to={item.pathname} className="text-decoration-none nav-item">
-                                            <a className="nav-link text-light" href="#">
+                                        <li key={index} className="text-decoration-none nav-item">
+                                            <Link  to={item.pathname} className="nav-link text-light" href="#">
                                                 {item.title}
-                                            </a>
-                                        </Link>)
+                                            </Link>
+                                        </li>)
                             }
-                            
-                        </ul>
-                    </div>
-                </div>
-                </nav>
+                </ul>
+                </header>
+            </div>
         </div>
     )
 }
