@@ -18,7 +18,7 @@ function GameDetail() {
         })
             .then((response) => response.json())
             .then(json => setGame(json))
-    }, [])
+    }, [URL])
 
     return (
         <div className='container'>
