@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import GameCard from './GameCard';
+import {Link} from "react-router-dom"
 import "../styles/games.css"
 
 function Games() {
@@ -28,16 +29,32 @@ function Games() {
     return (
         <div className="container">
             <div className='row'>
-            {
-                data.map(item => <GameCard 
-                    id={item.id} 
-                    title={item.title} 
-                    thumbnail={item.thumbnail} 
-                    genre={item.genre} 
-                    shortDescription={item.short_description} 
-                />
-                        )
-            }
+            <table class="table table-dark">
+            <thead className='text-info'>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Thumbnail</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                {
+                    data.map((item, index) =>  <tr>
+                                        <th scope="row">{index+1}</th>
+                                        <td> <img src={item.thumbnail} alt="" width="200" /></td>
+                                        <td>{item.title} <p className='text-muted'>{item.genre}</p></td>
+                                        
+                                        <td>{item.short_description}</td>
+                                        <td><Link to={`/games/${item.id}`} className="btn btn-outline-info w-100">
+                                                See Detail
+                                            </Link></td>
+                                    </tr>
+                    )
+                }
+                </tbody>
+              </table>
             </div>
         </div>
         
@@ -45,3 +62,11 @@ function Games() {
 }
 
 export default Games
+
+{/* <GameCard 
+                    id={item.id} 
+                    title={item.title} 
+                    thumbnail={item.thumbnail} 
+                    genre={item.genre} 
+                    shortDescription={item.short_description} 
+                /> */}

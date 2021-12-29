@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 function GameCard(props) {
 
     return (
-            <div key={props.id} className='col-sm-3'>
+            <div key={props.id} className='col-lg-3 col-md-4 col-sm-6'>
                                     <div className="card g-0 my-3 border border-info">
                                         <img src={props.thumbnail} className="card-img-top" alt={`${props.title}thumbnail`}/>
                                         <div className="card-body bg-dark text-light">

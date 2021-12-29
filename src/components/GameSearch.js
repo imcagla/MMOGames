@@ -67,7 +67,7 @@ function GameSearch() {
                             ) 
                     } 
                     {
-                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h1 className='text-light'>Not Found</h1>
+                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h5 className='text-light'>No results found for the search "{searchValue}"</h5>
                     }
                     </div>
                 </div>  
