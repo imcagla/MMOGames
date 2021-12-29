@@ -22,7 +22,6 @@ function GameSearch() {
     }
 
     const [data, setData] = useState([])
-    const [filteredData] = useState([])
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -40,7 +39,7 @@ function GameSearch() {
             }).catch((error)=>{
                 console.log("Api call error ", error.message);
             })
-    })
+    }, [])
 
     return (
         <div className='container my-5'>
@@ -52,11 +51,12 @@ function GameSearch() {
             </form>
             {location.pathname === '/search' && (
                 <div>
-                    <p className='text-muted my-3' >Search Results for <italic className="fst-italic">{searchValue}</italic> : </p>
+                    <p className='text-muted my-3' >Search Results for <span className="fst-italic">{searchValue}</span> : </p>
                     <p>{loading && "loading..."}</p>
                     <div className='row'>
                     {
                         data.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase())).map(item => <GameCard 
+                            key={item.id}
                             id={item.id} 
                             title={item.title} 
                             thumbnail={item.thumbnail} 

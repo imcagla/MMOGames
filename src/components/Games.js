@@ -22,7 +22,7 @@ function Games() {
             }).catch((error)=>{
                 console.log("Api call error ", error.message);
             })
-    })
+    }, [])
 
     if(loading) return <h1 className='text-secondary text-center my-5'>Loading...</h1>
 
@@ -41,7 +41,7 @@ function Games() {
                 </thead>
                 <tbody>
                 {
-                    data.map((item, index) =>  <tr className='border border-info align-middle'>
+                    data.map((item, index) =>  <tr key={index} className='border border-info align-middle'>
                                         <th scope="row">{index+1}</th>
                                         <td> <img src={item.thumbnail} alt={item.title} className='img-fluid' width="200" /></td>
                                         <td>{item.title} <p className='text-muted'>{item.genre}</p></td>
@@ -62,11 +62,3 @@ function Games() {
 }
 
 export default Games
-
-{/* <GameCard 
-                    id={item.id} 
-                    title={item.title} 
-                    thumbnail={item.thumbnail} 
-                    genre={item.genre} 
-                    shortDescription={item.short_description} 
-                /> */}
