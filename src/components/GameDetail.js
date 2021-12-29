@@ -25,10 +25,10 @@ function GameDetail() {
         <div className='container'>
             Game Detail
             <div className="col text-center">
-                <div class="card">
-                <div class="card-body">
-                    <h1 class="card-title">{game.title}</h1>
-                    <h6 class="card-subtitle mb-2">
+                <div className="card">
+                <div className="card-body">
+                    <h1 className="card-title">{game.title}</h1>
+                    <h6 className="card-subtitle mb-2">
                     Genre: {game.genre}
                     </h6>
                     <p>{game.short_description}</p>
@@ -42,7 +42,7 @@ function GameDetail() {
                         </ul>
                     </div>
                     
-                    <p class="card-text">{game.body}</p>
+                    <p className="card-text">{game.body}</p>
                     <a href={game.game_url} target="_blank" className='btn btn-lg btn-outline-primary mb-4' >Play Now!</a>
                 </div>
                 </div>

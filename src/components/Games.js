@@ -29,7 +29,7 @@ function Games() {
     return (
         <div className="container">
             <div className='row my-4'>
-            <table class="table table-dark">
+            <table className="table table-dark">
             <thead className='text-info'>
                   <tr>
                     <th scope="col"></th>
