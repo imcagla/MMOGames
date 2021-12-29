@@ -23,7 +23,7 @@ function Games() {
             })
     })
 
-    if(loading) return <h1>Loading...</h1>
+    if(loading) return <h1 className='text-secondary'>Loading...</h1>
 
     return (
         <div className="container">

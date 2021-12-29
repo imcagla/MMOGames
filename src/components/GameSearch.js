@@ -22,6 +22,7 @@ function GameSearch() {
     }
 
     const [data, setData] = useState([])
+    const [filteredData] = useState([])
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -51,19 +52,22 @@ function GameSearch() {
             </form>
             {location.pathname === '/search' && (
                 <div>
-                    <h1>Search Results for {searchValue}: </h1>
+                    <p className='text-muted my-3' >Search Results for <italic className="fst-italic">{searchValue}</italic> : </p>
                     <p>{loading && "loading..."}</p>
                     <div className='row'>
                     {
-                        data.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase())).map(item => 
-                        <GameCard 
+                        data.filter(item => item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase())).map(item => <GameCard 
                             id={item.id} 
                             title={item.title} 
                             thumbnail={item.thumbnail} 
                             genre={item.genre} 
                             shortDescription={item.short_description} 
                         />
-                                )
+                        
+                            ) 
+                    } 
+                    {
+                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h1 className='text-light'>Not Found</h1>
                     }
                     </div>
                 </div>  
