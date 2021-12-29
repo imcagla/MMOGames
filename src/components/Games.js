@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react'
-import GameCard from './GameCard';
 import {Link} from "react-router-dom"
 import "../styles/games.css"
 

@@ -6,10 +6,9 @@ function GameDetail() {
     const params = useParams();
 
     const [game, setGame] = useState([])
+    const URL = `https://mmo-games.p.rapidapi.com/game?id=${params.gameId}`
 
     useEffect(() => {
-        const URL = `https://mmo-games.p.rapidapi.com/game?id=${params.gameId}`
-
         fetch(URL, {
             "method": "GET",
             "headers": {
@@ -43,7 +42,7 @@ function GameDetail() {
                     </div>
                     
                     <p className="card-text">{game.body}</p>
-                    <a href={game.game_url} target="_blank" className='btn btn-lg btn-outline-primary mb-4' >Play Now!</a>
+                    <a href={game.game_url} target="_blank" rel="noreferrer" className='btn btn-lg btn-outline-primary mb-4' >Play Now!</a>
                 </div>
                 </div>
             </div>
