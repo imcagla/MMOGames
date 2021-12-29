@@ -62,9 +62,9 @@ function GameSearch() {
                             thumbnail={item.thumbnail} 
                             genre={item.genre} 
                             shortDescription={item.short_description} 
-                        />
-                            ) 
-                    } 
+                        />) 
+                    } </div>
+                    <div className='row'>
                     {
                         data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h5 className='text-light my-5 text-center py-5'>No results found for the search "{searchValue}"</h5>
                     }
