@@ -24,29 +24,29 @@ function Games() {
             })
     })
 
-    if(loading) return <h1 className='text-secondary'>Loading...</h1>
+    if(loading) return <h1 className='text-secondary text-center my-5'>Loading...</h1>
 
     return (
         <div className="container">
-            <div className='row'>
+            <div className='row my-4'>
             <table class="table table-dark">
             <thead className='text-info'>
                   <tr>
                     <th scope="col"></th>
                     <th scope="col">Thumbnail</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Description</th>
+                    <th scope="col" className=' d-sm-block d-none'>Description</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
                 {
-                    data.map((item, index) =>  <tr>
+                    data.map((item, index) =>  <tr className='border border-info align-middle'>
                                         <th scope="row">{index+1}</th>
-                                        <td> <img src={item.thumbnail} alt="" width="200" /></td>
+                                        <td> <img src={item.thumbnail} alt={item.title} className='img-fluid' width="200" /></td>
                                         <td>{item.title} <p className='text-muted'>{item.genre}</p></td>
                                         
-                                        <td>{item.short_description}</td>
+                                        <td className='d-sm-block d-none'>{item.short_description}</td>
                                         <td><Link to={`/games/${item.id}`} className="btn btn-outline-info w-100">
                                                 See Detail
                                             </Link></td>

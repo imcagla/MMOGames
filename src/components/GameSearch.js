@@ -43,7 +43,7 @@ function GameSearch() {
     })
 
     return (
-        <div className='container my-4'>
+        <div className='container my-5'>
             <form className="d-flex" onSubmit={handleSubmit}>
                 <input className="form-control me-2" id="search" name="q" defaultValue={searchValue} type="search" placeholder="Search" aria-label="Search"/>
                 <button className="btn btn-info" type="submit">
@@ -63,11 +63,10 @@ function GameSearch() {
                             genre={item.genre} 
                             shortDescription={item.short_description} 
                         />
-                        
                             ) 
                     } 
                     {
-                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h5 className='text-light'>No results found for the search "{searchValue}"</h5>
+                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h5 className='text-light my-5 text-center py-5'>No results found for the search "{searchValue}"</h5>
                     }
                     </div>
                 </div>  

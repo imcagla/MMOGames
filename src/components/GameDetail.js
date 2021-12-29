@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useParams} from "react-router-dom"
-
+import "../styles/games.css"
 
 function GameDetail() {
     const params = useParams();
@@ -22,25 +22,28 @@ function GameDetail() {
     }, [])
 
     return (
-        <div>
+        <div className='container'>
             Game Detail
-            <div className="col">
+            <div className="col text-center">
                 <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">{game.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">
+                    <h1 class="card-title">{game.title}</h1>
+                    <h6 class="card-subtitle mb-2">
                     Genre: {game.genre}
                     </h6>
                     <p>{game.short_description}</p>
-                    <img src={game.thumbnail} alt="" />
-                    <ul>
-                        <li>Platform: {game.platform}</li>
-                        <li>Publisher: {game.publisher}</li>
-                        <li>Developer: {game.developer}</li>
-                        <li>Release Date: {game.release_date}</li>
-                    </ul>
+                    <img className='my-3 img-fluid' src={game.thumbnail} alt={game.title} />
+                    <div className='text-center'>
+                        <ul className="list-unstyled text-start d-inline-block">
+                            <li><strong>Platform:</strong> <span className='ms-1'>{game.platform}</span> </li>
+                            <li><strong>Publisher:</strong> <span className='ms-1'>{game.publisher}</span> </li>
+                            <li><strong>Developer:</strong> <span className='ms-1'>{game.developer}</span> </li>
+                            <li><strong>Release Date:</strong> <span className='ms-1'>{game.release_date}</span> </li>
+                        </ul>
+                    </div>
+                    
                     <p class="card-text">{game.body}</p>
-                    <a href={game.game_url} className='btn btn-outline-primary' >Play Now!</a>
+                    <a href={game.game_url} target="_blank" className='btn btn-lg btn-outline-primary mb-4' >Play Now!</a>
                 </div>
                 </div>
             </div>
