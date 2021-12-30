@@ -34,7 +34,7 @@ function Games() {
                     <th scope="col"></th>
                     <th scope="col">Thumbnail</th>
                     <th scope="col">Title</th>
-                    <th scope="col" className=' d-sm-block d-none'>Description</th>
+                    <th scope="col">Description</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -45,7 +45,7 @@ function Games() {
                                         <td> <img src={item.thumbnail} alt={item.title} className='img-fluid' width="200" /></td>
                                         <td>{item.title} <p className='text-muted'>{item.genre}</p></td>
                                         
-                                        <td className='d-sm-block d-none'>{item.short_description}</td>
+                                        <td>{item.short_description}</td>
                                         <td><Link to={`/games/${item.id}`} className="btn btn-outline-info w-100">
                                                 See Detail
                                             </Link></td>
