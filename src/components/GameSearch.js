@@ -76,18 +76,3 @@ function GameSearch() {
 }
 
 export default GameSearch
-
-
-{/* <div key={item.id} className="card col-sm-3">
-                                    <img src={item.thumbnail} className="card-img-top" alt="..."/>
-                                    <div className="card-body">
-                                        <div className="d-flex align-items-center justify-content-between" >
-                                            <h5 className="card-title">{item.title}</h5>
-                                            <h6 className='text-muted'> {item.genre} </h6>
-                                        </div>
-                                        <p className="card-text small">{item.short_description}</p>
-                                        <Link to={`/games/${item.id}`} className="btn btn-primary">
-                                            See Detail
-                                        </Link>
-                                    </div>
-                                </div> */}
