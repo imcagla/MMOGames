@@ -18,7 +18,7 @@ function Navbar() {
                     <div className="navbar-nav ms-auto">
                     {
                                 routes.filter(item => item.isNav).map((item,index) => 
-                                            <Link  to={item.pathname} className="nav-link px-3 text-light" href="#">
+                                            <Link key={index} to={item.pathname} className="nav-link px-3 text-light" href="#">
                                                 {item.title}
                                             </Link>
                                         )
