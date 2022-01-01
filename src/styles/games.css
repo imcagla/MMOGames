@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.cursor-pointer {
+  cursor: pointer
+}
+
 
 .card-title {
     height: 50px;
