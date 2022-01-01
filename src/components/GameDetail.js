@@ -5,6 +5,7 @@ import "../styles/games.css"
 function GameDetail() {
     const params = useParams();
 
+    const [loading, setLoading] = useState(true)
     const [game, setGame] = useState([])
     const URL = `https://mmo-games.p.rapidapi.com/game?id=${params.gameId}`
 
@@ -17,8 +18,11 @@ function GameDetail() {
             }
         })
             .then((response) => response.json())
-            .then(json => setGame(json))
+            .then(json => {setGame(json)
+            setLoading(false)})
     }, [URL])
+
+    if(loading) return <h1 className='text-secondary text-center my-5'>Loading...</h1>
 
     return (
         <div className='container'>
