@@ -18,11 +18,10 @@ function Navbar() {
                     <div className="navbar-nav ms-auto">
                     {
                                 routes.filter(item => item.isNav).map((item,index) => 
-                                        <li key={index} className="text-decoration-none nav-item">
-                                            <Link  to={item.pathname} className="nav-link text-light" href="#">
+                                            <Link  to={item.pathname} className="nav-link px-3 text-light" href="#">
                                                 {item.title}
                                             </Link>
-                                        </li>)
+                                        )
                             }
                     </div>
                     </div>

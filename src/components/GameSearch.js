@@ -64,9 +64,9 @@ function GameSearch() {
                             shortDescription={item.short_description} 
                         />) 
                     } </div>
-                    <div className='row'>
+                    <div className='row justify-content-center'>
                     {
-                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <h5 className='text-light my-5 text-center py-5'>No results found for the search "{searchValue}"</h5>
+                        data.some(item => (item.title.toLowerCase().includes(searchValue.toLowerCase()) || item.genre.toLowerCase().includes(searchValue.toLowerCase()))) ? "" : <div className='alert alert-danger col-6 text-center py-5 mt-5' role="alert">No results found for the search "{searchValue}"</div>
                     }
                     </div>
                 </div>  
