@@ -6,7 +6,7 @@ import routes from './routes';
 
 
 function App() {
-  document.body.style.backgroundColor  = "#343a40"
+  document.body.style.backgroundColor  = "#212529"
 
   return (
     <div className='bg-dark'>
