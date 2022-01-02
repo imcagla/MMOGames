@@ -46,7 +46,7 @@ function GameDetail() {
                     </div>
                     
                     <p className="card-text">{game.body}</p>
-                    <a href={game.game_url} target="_blank" rel="noreferrer" className='btn btn-lg btn-outline-primary mb-4' >Play Now!</a>
+                    <a href={game.game_url} target="_blank" rel="noreferrer" className='btn btn-lg btn-outline-info mb-4' >Play Now!</a>
                 </div>
                 </div>
             </div>
