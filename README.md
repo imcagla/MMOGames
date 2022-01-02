@@ -1,3 +1,18 @@
+# UP School First Project - Public API
+
+<p>This page is created as a first project assignment given at UP School Front-end Development Program by <strong>Imran Cagla Eyuboglu</strong>. <a href="https://www.mmobomb.com/api">MMO Games</a> API used from <a href="https://github.com/public-apis/public-apis">https://github.com/public-apis/public-apis</a>. MMO Games API provides a database, news and giveaways about MMO Games.  </p>
+<p>A table, which all games in the database are included in, can be found in the games section. Also, you can search for MMO Games from home section. Finally, you can learn the details about your favorites.</p>
+
+## Technologies
+<ul>
+    <li>React</li>
+    <li>JavaScript</li>
+    <li>HTML</li>
+    <li>CSS</li>   
+    <li>Bootstrap</li>
+    <li>Public API</li>
+</ul>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
