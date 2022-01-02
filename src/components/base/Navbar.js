@@ -5,7 +5,7 @@ import routes from '../../routes'
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-info">
                 <div className="container">
                     <Link to="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
                         <i className="fas fa-gamepad fa-3x mx-2"></i>

@@ -6,6 +6,8 @@ import routes from './routes';
 
 
 function App() {
+  document.body.style.backgroundColor  = "#343a40"
+
   return (
     <div className='bg-dark'>
       <Navbar />
