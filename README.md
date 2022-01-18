@@ -4,7 +4,7 @@
 <p>A table, which all games in the database are included in, can be found in the games section. Also, you can search for MMO Games from home section. Finally, you can learn the details about your favorites.</p>
 
 [Click to see live project](https://gracious-bhabha-53fa6b.netlify.app)  
-
+![Project preview](https://github.com/imcagla/firstproject/blob/master/public/mmogames.gif?raw=true)
 
 ## Technologies
 <ul>
